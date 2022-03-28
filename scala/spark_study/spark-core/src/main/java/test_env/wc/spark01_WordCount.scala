@@ -16,8 +16,8 @@ object spark01_WordCount {
     //(1)读取文件
     val lines =sc.textFile("datasets")
     val words=lines.flatMap(_.split(" "))
-    val wordGroup=words.groupBy(word=>word)
-
+    val wordGroup =words.groupBy(word=>word)   //此处是一个lambda表达式
+    //group by调用后应该生成了map数据,然后可以用下边的方法解开
     val wordToCount=wordGroup.map {
       case (word, list) => {
         {
