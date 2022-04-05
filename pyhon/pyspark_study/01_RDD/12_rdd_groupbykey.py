@@ -7,8 +7,10 @@ if __name__=='__main__':
     # conf = SparkConf().setAppName("wordcount")
     sc = SparkContext(conf=conf)
 
-    rdd= sc.parallelize([1,2,3,4,5,6,7,8,9])
+    rdd1= sc.parallelize([('a',1),('a',1),('b',1),('b',1),('b',1)])
+    rdd2=rdd1.groupByKey()
 
-    #或者直接lambda x:x%2==0
-    print(rdd.filter(lambda x:True if x%2==0 else False).collect())
+    #根据二元元组key进行关联
+    print(rdd2.map(lambda x:(x[0],list(x[1]))).collect())
+
     sc.stop()
