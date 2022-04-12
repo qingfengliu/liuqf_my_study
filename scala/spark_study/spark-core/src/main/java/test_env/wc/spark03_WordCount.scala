@@ -1,5 +1,4 @@
 package test_env.wc
-import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 //执行的前提必须配置windows spark环境也就是不需要虚拟机了
 object spark03_WordCount {
@@ -39,3 +38,4 @@ object spark03_WordCount {
     sc.stop()
   }
 }
+
