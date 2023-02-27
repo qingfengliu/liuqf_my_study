@@ -8,7 +8,7 @@ from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import BinaryClassificationEvaluator,MulticlassClassificationEvaluator
 
 spark = SparkSession.builder.getOrCreate()
-sc = spark.sparkContext
+
 
 #代码逐行注释如下：
 #指定为csv格式
@@ -85,7 +85,7 @@ test_df.cache()
 test_y=mlorModel.transform(test_df)
 test_y.show()
 
-#这里在BinaryClassificationEvaluator只有auc和pr.
+#这里在BinaryClassificationEvaluator只有和pr.
 #这个多分类MulticlassClassificationEvaluator 有 但是不知道对不对先放在这里
 evaluator = MulticlassClassificationEvaluator(predictionCol='prediction',
                 labelCol='label',
@@ -101,13 +101,8 @@ test_y=test_y.select('url','label','prediction').toPandas()
 train_df.cache()
 test_df.cache()
 
-
-
-#
-
-
 spark.stop()
-sc.stop()
+
 
 train_y.to_csv("D:/书籍资料整理/逻辑回归结果_训练集.csv",index=False)
 test_y.to_csv("D:/书籍资料整理/逻辑回归结果_测试集.csv",index=False)

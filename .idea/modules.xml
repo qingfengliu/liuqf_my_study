@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/liuqf_my_study.iml" filepath="$PROJECT_DIR$/.idea/liuqf_my_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../statics_use/.idea/statics_use.iml" filepath="$PROJECT_DIR$/../statics_use/.idea/statics_use.iml" />
     </modules>
   </component>
 </project>

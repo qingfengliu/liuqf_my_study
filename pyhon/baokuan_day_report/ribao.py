@@ -83,6 +83,7 @@ def get_attr():
     if not start_time:
         start_time = time_parse(1)
     return start_time
+
 db_ali=web.database(dbn='mysql', db='belle', user='yougou', pw='09E636cd', port=3306, host='rm-m5e2m5gr559b3s484.mysql.rds.aliyuncs.com')
 
 temp = db_ali.query('select * from belle.dm_commodity_style_date_brand where `report_date`>="%s";' %get_attr())

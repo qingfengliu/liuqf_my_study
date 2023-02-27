@@ -1,2 +1,0 @@
-type=command
-command=/home/qfliu/python/bin/python3 source_data_dianping.py -td company_up -fd company_down

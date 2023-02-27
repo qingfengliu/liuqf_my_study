@@ -1,3 +1,0 @@
-type=command
-command=/home/qfliu/python/bin/python3 del_wenzi_info.py -td company_up -fd company_up
-dependencies=full_data
