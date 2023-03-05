@@ -1,3 +1,0 @@
-type=command
-command=/home/qfliu/python/bin/python3 check_zhoubao.py
-dependencies=zhoubao
