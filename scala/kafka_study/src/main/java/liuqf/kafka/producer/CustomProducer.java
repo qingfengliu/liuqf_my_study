@@ -12,7 +12,7 @@ public class CustomProducer {
     public static void main(String[] args) {
         //0配置 连接集群
         Properties properties=new Properties();
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,"liuqf1:9092,liuqf2:9092");
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,"liuqf1:9092");
 
         //指定Key和Value的序列化类型
         //StringSerializer.class.getName() 的值是org.apache.kafka.common.serialization.StringSerializer

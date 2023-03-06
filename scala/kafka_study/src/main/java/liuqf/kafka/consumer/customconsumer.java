@@ -17,7 +17,7 @@ public class customconsumer {
         //0 配置
         Properties properties= new Properties();
 
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"liuqf1:9092,liuqf2:9092");
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"liuqf1:9092");
         //反序列化
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
