@@ -14,7 +14,7 @@ public class BoundStreamWordCount {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         //2.从文件中读取数据
-        DataStreamSource<String> lineDataSource = env.readTextFile("D:\\泰康学习\\造数\\word.txt");
+        DataStreamSource<String> lineDataSource = env.readTextFile("D:\\data\\recommend\\word.txt");
 
         //3.将每个单词进行切分,转换成二元组
         SingleOutputStreamOperator<Tuple2<String, Long>> wordandone = lineDataSource.flatMap((String line, Collector<Tuple2<String, Long>> out) -> {

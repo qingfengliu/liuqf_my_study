@@ -16,7 +16,7 @@ public class BatchWordCount {
         final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
         //2.从文件中读取数据
-        DataSource<String> lineDataSource = env.readTextFile("D:\\泰康学习\\造数\\word.txt");
+        DataSource<String> lineDataSource = env.readTextFile("D:\\data\\recommend\\word.txt");
 
         //3.将每个单词进行切分,转换成二元组
         FlatMapOperator<String, Tuple2<String, Long>> wordandone = lineDataSource.flatMap((String line, Collector<Tuple2<String, Long>> out) -> {
