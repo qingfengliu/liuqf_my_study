@@ -15,7 +15,7 @@ public class StreamWordCount {
     public static void main(String[] args) throws Exception {
         //1.获取运行环境
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-
+        
         //从参数中提取主机名和端口号
         ParameterTool parameterTool = ParameterTool.fromArgs(args);
         String host = parameterTool.get("host");
